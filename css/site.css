@@ -1,0 +1,10 @@
+.metrouicss .page {
+    width: 940px ;
+    margin: auto;
+}
+ul.menu{
+	float:right;
+}
+.publish{
+	float:right;
+}

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="description" content="The homepage of Robin.L; All about me">
+    <meta name="author" content="Sergey Pimenov">
+    <meta name="keywords" content="homepage links">
+
+	<link href="css/modern.css" rel="stylesheet">
+    <link href="css/modern-responsive.css" rel="stylesheet">
+    <link href="css/theme-dark.css" rel="stylesheet" type="text/css">
+	<link href="css/site-home.css" rel="stylesheet">
+	
+    <script type="text/javascript" src="js/jquery-1.9.0.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mousewheel.min.js"></script>
+	<script type="text/javascript" src="js/start-menu.js"></script>
+	<script type="text/javascript" src="js/tile-slider.js"></script>
+    <script type="text/javascript" src="js/tile-drag.js"></script>
+	<script type="text/javascript" src="js/dialog.js"></script>
+
+    <title>My Start Page</title>
+    <script type="text/javascript">
+	     $(document).ready(function(){
+                $('#email').click(function(e) {
+                    $.Dialog({
+                        'title'      : 'My email adress',
+                        'content'    : 'This content can be in HTML.<br />You can add custom function to your buttons!<br /><br /><b>Features:</b><ul><li>Easy to use!</li><li>Customizable</li><li>Powerful!</li></ul>',
+                        'buttons'    : {
+                            'Ok'    : {
+                                'action': function(){}
+                            },
+                            'Cancel'     : {
+                                'action': function(){}
+                            }
+                        }
+                    });
+                });
+			});
+</script>
+</head>
+<body class="metrouicss">
+<div class="page secondary fixed-header bg-color-">
+    <div class="page-header ">
+        <div class="page-header-content">
+            <div class="user-login">
+                <a href="#">
+                    <div class="name">
+                        <span class="first-name">Robin</span>
+                        <span class="last-name">Liu</span>
+                    </div>
+                    <div class="avatar">
+                        <img src="img/default.png"/>
+                    </div>
+                </a>
+            </div>
+
+            <h1 class="fg-color-white">Home</h1>
+        </div>
+    </div>
+
+    <div class="page-region">
+        <div class="page-region-content tiles">
+            <div class="tile-group tile-drag">
+                <a href="http://spdf.me/" class="tile icon bg-color-green">
+                    <div class="tile-content">
+                        <img src="img/wordpress.png" alt="">
+                    </div>
+					<div class="brand">
+						<span class="name">Blog</span>
+					</div>
+                </a>
+				<div id="email" class="tile icon bg-color-pink">
+                    <div class="tile-content">
+                        <img src="img/email.png"></i>
+                    </div>
+                    <div class="brand">
+                        <span class="name">Mail me</span>
+                    </div>
+                </div>
+                <div class="tile icon bg-color-orangeDark">
+                    <div class="tile-content">
+                        <img src="img/amazonwishlist.png"/>
+                    </div>
+                    <div class="brand">
+                        <div class="name">Buy me a gift</div>
+                    </div>
+                </div>
+
+                <div class="tile double bg-color-blue" data-role="tile-slider" data-param-period="4000">
+                    <div class="tile-content">
+                        <img src="img/twitter.png" alt="" class="icon"/>
+                    </div>
+                    <div class="tile-content">
+						<img src="img/default.png" class="place-left"/>
+                        <h3 style="margin-bottom: 5px;">一树小草</h3>
+                        <p>
+                            Shame! shuntian lost to a tialand football team!
+                        </p>
+                        <h5>RT @XXX</h5>
+                    </div>
+                    <div class="brand">
+                        <div class="name">Twitter</div>
+                    </div>
+                </div>
+
+                <div class="tile bg-color-blueDark icon">
+                    <div class="tile-content">
+                        <img src="img/delicious.png" alt="" />
+                    </div>
+                    <div class="brand">
+                        <span class="name">Delicious</span>
+                    </div>
+                </div>
+				
+				<div class="tile bg-color-yellow">
+                    <div class="tile-content">
+                        <img src="img/sina.png" alt="" class="logo-small" />
+                    </div>
+                    <div class="brand">
+                        <span class="name">Weibo</span>
+                    </div>
+                </div>
+				
+				<div class="tile bg-color-greenLight icon">
+                    <div class="tile-content">
+                        <img src="img/Bangumi.png" alt=""/>
+                    </div>
+                    <div class="brand">
+                        <span class="name">Bangumi</span>
+                    </div>
+                </div>
+
+            </div>
+			
+            <div class="tile-group tile-drag">
+			
+				<div class="tile double image-slider" data-role="tile-slider" data-param-period="5000" data-param-direction="left">
+                    <div class="tile-content">
+                        <img src="img/1.png" alt="">
+                    </div>
+                    <div class="tile-content">
+                        <img src="img/2.png" alt="">
+                    </div>
+                    <div class="tile-content">
+                        <img src="img/3.png" alt="">
+                    </div>
+					<div class="brand">
+                        <span class="name">Picture</span>
+                    </div>
+                </div>
+            </div>
+		</div>
+    </div>
+</div>
+
+</body>
+</html>
