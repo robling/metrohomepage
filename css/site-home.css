@@ -22,3 +22,10 @@
 	  margin-left: -64px;
 	  margin-top: -32px;
 }
+img[src^="http://lain.bgm.tv/"]{
+	float: left !important;
+	margin-right: 10px;
+}
+body{
+	background-image: url("../img/bg.jpg");
+}

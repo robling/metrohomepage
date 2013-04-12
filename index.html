@@ -14,6 +14,7 @@
 	
     <script type="text/javascript" src="js/jquery-1.9.0.min.js"></script>
     <script type="text/javascript" src="js/jquery.mousewheel.min.js"></script>
+	<script type="text/javascript" src="js/jquery.stellar.min.js"></script>
 	<script type="text/javascript" src="js/start-menu.js"></script>
 	<script type="text/javascript" src="js/tile-slider.js"></script>
     <script type="text/javascript" src="js/tile-drag.js"></script>
@@ -21,25 +22,28 @@
 
     <title>My Start Page</title>
     <script type="text/javascript">
-	     $(document).ready(function(){
-                $('#email').click(function(e) {
-                    $.Dialog({
-                        'title'      : 'My email adress',
-                        'content'    : 'This content can be in HTML.<br />You can add custom function to your buttons!<br /><br /><b>Features:</b><ul><li>Easy to use!</li><li>Customizable</li><li>Powerful!</li></ul>',
-                        'buttons'    : {
-                            'Ok'    : {
-                                'action': function(){}
-                            },
-                            'Cancel'     : {
-                                'action': function(){}
-                            }
-                        }
-                    });
-                });
-			});
+		$(function(){
+			$.stellar();
+		});
+	    $(document).ready(function(){
+               $('#email').click(function(e) {
+                   $.Dialog({
+                       'title'      : 'My email adress',
+                       'content'    : '<h2>spdf@live.com</h2>',
+                       'buttons'    : {
+                           'Ok'    : {
+                               'action': function(){}
+                           },
+                           'Cancel'     : {
+                               'action': function(){}
+                           }
+                       }
+                   });
+               });
+		});
 </script>
 </head>
-<body class="metrouicss">
+<body class="metrouicss" data-stellar-background-ratio="2">
 <div class="page secondary fixed-header bg-color-">
     <div class="page-header ">
         <div class="page-header-content">
@@ -78,15 +82,16 @@
                         <span class="name">Mail me</span>
                     </div>
                 </div>
-                <div class="tile icon bg-color-orangeDark">
+				
+				<div class="tile bg-color-orange double">
                     <div class="tile-content">
-                        <img src="img/amazonwishlist.png"/>
+                        <h2 style="margin-top:10px;">呐，知道么，樱花飘落的速度，是每秒五厘米哦~</h2>
                     </div>
                     <div class="brand">
-                        <div class="name">Buy me a gift</div>
+                        <div class="name">ヒトコト - Hitokoto</div>
                     </div>
                 </div>
-
+				
                 <div class="tile double bg-color-blue" data-role="tile-slider" data-param-period="4000">
                     <div class="tile-content">
                         <img src="img/twitter.png" alt="" class="icon"/>
@@ -103,7 +108,20 @@
                         <div class="name">Twitter</div>
                     </div>
                 </div>
-
+				<div class="tile bg-color-greenLight double" data-role="tile-slider" data-param-period="7000">
+                    <div class="tile-content">
+                        <img src="img/bangumi.png" alt=""/ class="icon">
+                    </div>
+					<div class="tile-content place-left">
+                        <a href="http://bangumi.tv/subject/48034" title="琴浦さん">
+							<img src="http://lain.bgm.tv/pic/cover/s/e5/0d/48034_C8505.jpg" alt="琴浦さん" />
+						</a>
+						<h3 style="margin-bottom: 5px;">在看:琴浦さん</h3>
+                    </div>
+                    <div class="brand">
+                        <span class="name">Bangumi</span>
+                    </div>
+                </div>
                 <div class="tile bg-color-blueDark icon">
                     <div class="tile-content">
                         <img src="img/delicious.png" alt="" />
@@ -121,13 +139,30 @@
                         <span class="name">Weibo</span>
                     </div>
                 </div>
-				
-				<div class="tile bg-color-greenLight icon">
+				<div class="tile bg-color-purple icon">
                     <div class="tile-content">
-                        <img src="img/Bangumi.png" alt=""/>
+                        <img src="img/github.png" alt=""/>
                     </div>
                     <div class="brand">
-                        <span class="name">Bangumi</span>
+                        <span class="name">Github</span>
+                    </div>
+                </div>
+				
+				<div class="tile bg-color-blueDark icon">
+                    <div class="tile-content">
+                        <img src="img/facebook.png" alt=""/>
+                    </div>
+                    <div class="brand">
+                        <span class="name">Facebook</span>
+                    </div>
+                </div>
+				
+                <div class="tile icon bg-color-orangeDark">
+                    <div class="tile-content">
+                        <img src="img/amazonwishlist.png"/>
+                    </div>
+                    <div class="brand">
+                        <div class="name">Buy me a gift</div>
                     </div>
                 </div>
 
