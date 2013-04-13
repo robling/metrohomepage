@@ -1,9 +1,4 @@
-﻿<!DOCTYPE html>
-<html >
-<head>
-<meta charset="UTF-8">
-
-<?php
+﻿<?php
 /*	use file_get_content to get 
  *	$stream = file_get_contents($url);//目的页面内容获取
  */
@@ -28,7 +23,9 @@
 	curl_close($ch);
 	$xml = simplexml_load_string($stream, 'SimpleXMLElement', LIBXML_NOCDATA);
 	$catch = $xml->channel->item[0];
+	
 	$title = $catch->title[0];
 	$link = $catch->link[0];
 	$pic = $dec = $catch->description[0];
+	$hitokoto = $array["hitokoto"];
 ?>

@@ -1,8 +1,10 @@
 ﻿<?php
 	require("timeline.php");
 ?>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
+	<meta charset="UTF-8">
     <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, maximum-scale=1">
     <meta name="description" content="The homepage of Robin.L; All about me">
     <meta name="author" content="Sergey Pimenov">
@@ -13,34 +15,10 @@
     <link href="css/theme-dark.css" rel="stylesheet" type="text/css">
 	<link href="css/site-home.css" rel="stylesheet">
 	
-    <script type="text/javascript" src="js/jquery-1.9.0.min.js"></script>
-    <script type="text/javascript" src="js/jquery.mousewheel.min.js"></script>
-	<script type="text/javascript" src="js/start-menu.js"></script>
-	<script type="text/javascript" src="js/tile-slider.js"></script>
-    <script type="text/javascript" src="js/tile-drag.js"></script>
-	<script type="text/javascript" src="js/dialog.js"></script>
+	<title>My Start Page</title>
 
-    <title>My Start Page</title>
-    <script type="text/javascript">
-	     $(document).ready(function(){
-                $('#email').click(function(e) {
-                    $.Dialog({
-                        'title'      : 'My email adress',
-                        'content'    : '<h2>spdf@live.com</h2>',
-                        'buttons'    : {
-                            'Ok'    : {
-                                'action': function(){}
-                            },
-                            'Cancel'     : {
-                                'action': function(){}
-                            }
-                        }
-                    });
-                });
-			});
-</script>
 </head>
-<body class="metrouicss">
+<body class="metrouicss" data-stellar-background-ratio="0.5">
 <div class="page secondary fixed-header bg-color-">
     <div class="page-header ">
         <div class="page-header-content">
@@ -62,15 +40,21 @@
 
     <div class="page-region">
         <div class="page-region-content tiles">
-            <div class="tile-group tile-drag">
-                <a href="http://spdf.me/" class="tile icon bg-color-green">
+			
+			<!-- Group 1 -->
+            <div class="tile-group">
+				
+				<!-- My Blog -->
+                <div out="http://spdf.me/" class="tile icon bg-color-green link_out">
                     <div class="tile-content">
                         <img src="img/wordpress.png" alt="">
                     </div>
 					<div class="brand">
 						<span class="name">Blog</span>
 					</div>
-                </a>
+                </div>
+				
+				<!-- Email -->
 				<div id="email" class="tile icon bg-color-pink">
                     <div class="tile-content">
                         <img src="img/email.png"></i>
@@ -80,16 +64,28 @@
                     </div>
                 </div>
 				
+				<!-- Delicioue -->
+                <div class="tile bg-color-blueDark icon link_out" out="http://delicious.com/robling">
+                    <div class="tile-content">
+                        <img src="img/delicious.png" alt="" />
+                    </div>
+                    <div class="brand">
+                        <span class="name">Delicious</span>
+                    </div>
+                </div>
+				
+				<!-- Hitokoto -->
 				<div class="tile bg-color-orange double">
                     <div class="tile-content">
-                        <h2 style="margin-top:10px;"><?php  echo $array["hitokoto"] ?></h2>
+                        <h2 style="margin-top:10px;"><?php  echo $hitokoto ?></h2>
                     </div>
                     <div class="brand">
                         <div class="name">ヒトコト - Hitokoto</div>
                     </div>
                 </div>
 				
-                <div class="tile double bg-color-blue" data-role="tile-slider" data-param-period="4000">
+				<!-- My twitter -->
+                <div id="twitter" class="tile double bg-color-blue link_out" data-role="tile-slider" data-param-period="4000" out="http://twitter.com/roblin_spdf">
                     <div class="tile-content">
                         <img src="img/twitter.png" alt="" class="icon"/>
                     </div>
@@ -97,15 +93,16 @@
 						<img src="img/default.png" class="place-left"/>
                         <h3 style="margin-bottom: 5px;">一树小草</h3>
                         <p>
-                            Shame! shuntian lost to a tialand football team!
+                            抱歉，超出了Twitter api的小时配额，无法获取最新的条目。
                         </p>
-                        <h5>RT @XXX</h5>
                     </div>
                     <div class="brand">
                         <div class="name">Twitter</div>
                     </div>
                 </div>
-				<div class="tile bg-color-greenLight double" data-role="tile-slider" data-param-period="7000">
+				
+				<!-- My Bangummi -->
+				<div class="tile bg-color-greenLight double link_out" data-role="tile-slider" data-param-period="7000" out="http://bangumi.tv/user/spdf" >
                     <div class="tile-content">
                         <img src="img/bangumi.png" alt=""/ class="icon">
                     </div>
@@ -117,24 +114,9 @@
                         <span class="name">Bangumi</span>
                     </div>
                 </div>
-                <div class="tile bg-color-blueDark icon">
-                    <div class="tile-content">
-                        <img src="img/delicious.png" alt="" />
-                    </div>
-                    <div class="brand">
-                        <span class="name">Delicious</span>
-                    </div>
-                </div>
 				
-				<div class="tile bg-color-yellow">
-                    <div class="tile-content">
-                        <img src="img/sina.png" alt="" class="logo-small" />
-                    </div>
-                    <div class="brand">
-                        <span class="name">Weibo</span>
-                    </div>
-                </div>
-				<div class="tile bg-color-purple icon">
+				<!-- Github -->
+				<div class="tile bg-color-purple icon link_out" out="http://github.com/spdf">
                     <div class="tile-content">
                         <img src="img/github.png" alt=""/>
                     </div>
@@ -143,7 +125,18 @@
                     </div>
                 </div>
 				
-				<div class="tile bg-color-blueDark icon">
+				<!-- Sina Weibo -->
+				<div class="tile bg-color-yellow link_out" out="http://weibo.com/spdfgh">
+                    <div class="tile-content">
+                        <img src="img/sina.png" alt="" class="logo-small" />
+                    </div>
+                    <div class="brand">
+                        <span class="name">Weibo</span>
+                    </div>
+                </div>
+				
+				<!-- Facebook -->
+				<div class="tile bg-color-blueDark icon link_out" out="http://www.facebook.com/robin.liu.12914">
                     <div class="tile-content">
                         <img src="img/facebook.png" alt=""/>
                     </div>
@@ -151,8 +144,9 @@
                         <span class="name">Facebook</span>
                     </div>
                 </div>
-				
-                <div class="tile icon bg-color-orangeDark">
+
+				<!-- Amazon Wishlist -->
+                <div class="tile icon bg-color-orangeDark link_out" out="http://www.amazon.cn/registry/wishlist/3FAWWKP2I6RO1/ref=cm_wl_act_vv?_encoding=UTF8&reveal=&visitor-view=1">
                     <div class="tile-content">
                         <img src="img/amazonwishlist.png"/>
                     </div>
@@ -163,8 +157,10 @@
 
             </div>
 			
+			<!-- Group 2 -->
             <div class="tile-group tile-drag">
 			
+				<!-- Image Slider -->
 				<div class="tile double image-slider" data-role="tile-slider" data-param-period="5000" data-param-direction="left">
                     <div class="tile-content">
                         <img src="img/1.png" alt="">
@@ -179,10 +175,61 @@
                         <span class="name">Picture</span>
                     </div>
                 </div>
+				
+				<!-- OSU! -->
+				<div id="about" class="tile icon bg-color-orangeDark link_out" out="http://osu.ppy.sh/u/1445690">
+                    <div class="tile-content">
+                        <img src="img/osu.png" alt="">
+                    </div>
+                    <div class="brand">
+                        <div class="name">About</div>
+                    </div>
+                </div>
+				
+				<!-- About This Page -->
+				<div id="about" class="tile icon bg-color-blue">
+                    <div class="tile-content">
+                        <h1 style="margin-top:10px;margin-left:10px;" > About</h1>
+                    </div>
+                    <div class="brand">
+                        <div class="name">About</div>
+                    </div>
+                </div>
             </div>
 		</div>
     </div>
 </div>
 
+	<script type="text/javascript" src="js/jquery-1.9.0.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mousewheel.min.js"></script>
+	<script type="text/javascript" src="js/jquery.stellar.min.js"></script>
+	<script type="text/javascript" src="js/tile.js"></script>
+
+    <script type="text/javascript">
+		$(function(){
+			$.stellar();
+		});
+	     $(document).ready(function(){
+                $('#email').dblclick(function(e) {
+                    $.Dialog({
+                        'title'      : 'My email adress',
+                        'content'    : '<br/><h2 style="margin-left:20%;">spdf@live.com</h2><br/><p style="margin-left:20%;">常联系啊！</p>',
+                        'buttons'    : {
+                            'Send Me An Email'    : {
+                                'action': function(){window.open("mailto:spdf@live.com");}
+                            },
+                            'Cancel'     : {
+                                'action': function(){}
+                            }
+                        }
+                    });
+                });
+				//for test,use dblclick,else mouseup
+				$('.link_out').dblclick(function(e) {
+					//alert($(this).attr("out"));
+                    window.open($(this).attr("out"));
+                });
+			});
+	</script>
 </body>
 </html>

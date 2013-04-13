@@ -26,6 +26,7 @@ img[src^="http://lain.bgm.tv/"]{
 	float: left !important;
 	margin-right: 10px;
 }
-body{
-	background-image: url("../img/bg.jpg");
+.stellar_back{
+	background-image: url("../img/bg0.jpg");
+	background-repeat: repeat;
 }

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -11,7 +11,7 @@
     <link href="css/modern-responsive.css" rel="stylesheet">
     <link href="css/theme-dark.css" rel="stylesheet" type="text/css">
 	<link href="css/site-home.css" rel="stylesheet">
-	
+
     <script type="text/javascript" src="js/jquery-1.9.0.min.js"></script>
     <script type="text/javascript" src="js/jquery.mousewheel.min.js"></script>
 	<script type="text/javascript" src="js/jquery.stellar.min.js"></script>
@@ -25,21 +25,21 @@
 		$(function(){
 			$.stellar();
 		});
-	    $(document).ready(function(){
-               $('#email').click(function(e) {
-                   $.Dialog({
-                       'title'      : 'My email adress',
-                       'content'    : '<h2>spdf@live.com</h2>',
-                       'buttons'    : {
-                           'Ok'    : {
-                               'action': function(){}
-                           },
-                           'Cancel'     : {
-                               'action': function(){}
-                           }
-                       }
-                   });
-               });
+		$(document).ready(function(){
+			$('#email').click(function(e) {
+				$.Dialog({
+					'title' : 'My email adress',
+					'content' : '<h2>spdf@live.com</h2>',
+					'buttons' : {
+						'Send Me An Email' : {
+							'action': function(){window.open("mailto:spdf@live.com");}
+						},
+						'Cancel' : {
+							'action': function(){}
+						}
+					}
+				});
+			});
 		});
 </script>
 </head>
@@ -70,11 +70,11 @@
                     <div class="tile-content">
                         <img src="img/wordpress.png" alt="">
                     </div>
-					<div class="brand">
-						<span class="name">Blog</span>
-					</div>
+<div class="brand">
+<span class="name">Blog</span>
+</div>
                 </a>
-				<div id="email" class="tile icon bg-color-pink">
+<div id="email" class="tile icon bg-color-pink">
                     <div class="tile-content">
                         <img src="img/email.png"></i>
                     </div>
@@ -82,7 +82,7 @@
                         <span class="name">Mail me</span>
                     </div>
                 </div>
-				
+
 				<div class="tile bg-color-orange double">
                     <div class="tile-content">
                         <h2 style="margin-top:10px;">呐，知道么，樱花飘落的速度，是每秒五厘米哦~</h2>
@@ -91,7 +91,7 @@
                         <div class="name">ヒトコト - Hitokoto</div>
                     </div>
                 </div>
-				
+
                 <div class="tile double bg-color-blue" data-role="tile-slider" data-param-period="4000">
                     <div class="tile-content">
                         <img src="img/twitter.png" alt="" class="icon"/>
@@ -108,6 +108,7 @@
                         <div class="name">Twitter</div>
                     </div>
                 </div>
+				
 				<div class="tile bg-color-greenLight double" data-role="tile-slider" data-param-period="7000">
                     <div class="tile-content">
                         <img src="img/bangumi.png" alt=""/ class="icon">
@@ -122,6 +123,7 @@
                         <span class="name">Bangumi</span>
                     </div>
                 </div>
+				
                 <div class="tile bg-color-blueDark icon">
                     <div class="tile-content">
                         <img src="img/delicious.png" alt="" />
@@ -130,7 +132,7 @@
                         <span class="name">Delicious</span>
                     </div>
                 </div>
-				
+
 				<div class="tile bg-color-yellow">
                     <div class="tile-content">
                         <img src="img/sina.png" alt="" class="logo-small" />
@@ -139,6 +141,7 @@
                         <span class="name">Weibo</span>
                     </div>
                 </div>
+				
 				<div class="tile bg-color-purple icon">
                     <div class="tile-content">
                         <img src="img/github.png" alt=""/>
@@ -147,7 +150,7 @@
                         <span class="name">Github</span>
                     </div>
                 </div>
-				
+
 				<div class="tile bg-color-blueDark icon">
                     <div class="tile-content">
                         <img src="img/facebook.png" alt=""/>
@@ -156,7 +159,7 @@
                         <span class="name">Facebook</span>
                     </div>
                 </div>
-				
+
                 <div class="tile icon bg-color-orangeDark">
                     <div class="tile-content">
                         <img src="img/amazonwishlist.png"/>
@@ -167,9 +170,9 @@
                 </div>
 
             </div>
-			
+
             <div class="tile-group tile-drag">
-			
+
 				<div class="tile double image-slider" data-role="tile-slider" data-param-period="5000" data-param-direction="left">
                     <div class="tile-content">
                         <img src="img/1.png" alt="">
@@ -180,12 +183,12 @@
                     <div class="tile-content">
                         <img src="img/3.png" alt="">
                     </div>
-					<div class="brand">
+				<div class="brand">
                         <span class="name">Picture</span>
                     </div>
                 </div>
             </div>
-		</div>
+</div>
     </div>
 </div>
 
