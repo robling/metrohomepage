@@ -177,22 +177,22 @@
                 </div>
 				
 				<!-- OSU! -->
-				<div id="about" class="tile icon bg-color-orangeDark link_out" out="http://osu.ppy.sh/u/1445690">
+				<div class="tile icon bg-color-orangeDark link_out" out="http://osu.ppy.sh/u/1445690">
                     <div class="tile-content">
                         <img src="img/osu.png" alt="">
                     </div>
                     <div class="brand">
-                        <div class="name">About</div>
+                        <div class="name">OSU!</div>
                     </div>
                 </div>
 				
 				<!-- About This Page -->
-				<div id="about" class="tile icon bg-color-blue">
+				<div id="about" class="tile icon outline-color-green bg-color-blue">
                     <div class="tile-content">
-                        <h1 style="margin-top:10px;margin-left:10px;" > About</h1>
+                        <h1 style="margin-top:30px;margin-left:10px;font-size:40px;" > About</h1>
                     </div>
-                    <div class="brand">
-                        <div class="name">About</div>
+					<div class="brand">
+                        <div class="name">This Page</div>
                     </div>
                 </div>
             </div>
@@ -210,10 +210,10 @@
 			$.stellar();
 		});
 	     $(document).ready(function(){
-                $('#email').dblclick(function(e) {
+                $('#email').mouseup(function(e) {
                     $.Dialog({
                         'title'      : 'My email adress',
-                        'content'    : '<br/><h2 style="margin-left:20%;">spdf@live.com</h2><br/><p style="margin-left:20%;">常联系啊！</p>',
+                        'content'    : '<br/><h2 style="margin-left:10%;">spdf@live.com</h2><br/><p style="margin-left:20%;">常联系啊！</p>',
                         'buttons'    : {
                             'Send Me An Email'    : {
                                 'action': function(){window.open("mailto:spdf@live.com");}
@@ -224,8 +224,19 @@
                         }
                     });
                 });
+				$('#about').mouseup(function(e) {
+                    $.Dialog({
+                        'title'      : 'About this Site',
+                        'content'    : '<p>Created by Robin.Liu @2013</p><br/>Styled with <a style="color:#ccc;" href="http://metroui.org.ua">Metro UI CSS</a> <br/>',
+                        'buttons'    : {
+                            'OK'     : {
+                                'action': function(){}
+                            }
+                        }
+                    });
+                });
 				//for test,use dblclick,else mouseup
-				$('.link_out').dblclick(function(e) {
+				$('.link_out').mouseup(function(e) {
 					//alert($(this).attr("out"));
                     window.open($(this).attr("out"));
                 });
