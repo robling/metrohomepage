@@ -1,0 +1,7 @@
+.scaled-img{
+    width: 70% !important;
+    height: 70% !important;
+    position: absolute;
+    top: 10%;
+    left: 16%;
+}

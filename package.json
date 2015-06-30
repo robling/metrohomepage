@@ -1,0 +1,26 @@
+{
+  "name": "metrohomepage",
+  "version": "0.1.0",
+  "description": "Home page with social links and updated personal infomation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+      "swig": "*"
+  },
+  "devDependencies": {
+    "koa": "*",
+    "koa-static": "*",
+    "hjson": "*"
+  },
+  "author": {
+    "name": "Robin Liu",
+    "email": "mio@spdf.me"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:robling/metrohomepage.git"
+  },
+  "license": "MIT"
+}

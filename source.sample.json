@@ -1,0 +1,28 @@
+{
+    "title": "Page title",
+    "name": "Display you name or nickname",
+    "groups": [
+        {
+            "title": "Group A",
+            "width": "two",
+            "tiles": [
+                {
+                    "type": "mail",
+                    /* large, wide, medium, small*/
+                    "size": "large",
+                    "content": {
+                        "title": "Mail me",
+                        "mail": "aaa@bbb.cc"
+                    }
+                },
+                {
+                    "type": "link",
+                    "content": {
+                        "title": "Mail me",
+                        "mail": "aaa@bbb.cc"
+                    }
+                }
+            ]
+        }
+    ]
+}
