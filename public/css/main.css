@@ -1,7 +1,16 @@
+.image-container .scaled{
+    padding-top: 8% !important;
+}
 .scaled-img{
-    width: 70% !important;
-    height: 70% !important;
-    position: absolute;
-    top: 10%;
-    left: 16%;
+    height: auto !important;
+    width: auto !important;
+    max-height: 70%;
+    margin:0 auto;
+}
+.tile-text{
+    font-size: 1.4em;
+}
+.tile-label{
+    left: auto !important;
+    right: 0.625rem !important;
 }

@@ -10,7 +10,7 @@
                     <div class="tile bg-violet fg-white" data-role="tile">
                         <div class="tile-content">
                             <div class="image-container">
-                                <div class="frame bg-indigo">
+                                <div class="frame scaled bg-violet">
                                     <img class="scaled-img" src="img/wordpress.png">
                                 </div>
                             </div>
@@ -34,18 +34,28 @@
                         <span class="tile-label">Steam</span>
                     </div>
                 </a>
-                <a href="">
+                <a href="http://hitokoto.us/view/{{ hitokoto.id }}">
                     <div class="tile-wide bg-amber fg-white" data-role="tile">
                         <div class="tile-content iconic">
-                            <span class="icon mif-favorite"></span>
+                            <div class="margin20 text-shadow">
+                                <p class="tile-text">{{ hitokoto.hitokoto }}</p>
+                            </div>
                         </div>
                         <span class="tile-label">Hitokoto</span>
                     </div>
                 </a>
-                <a href="https://twitter.com/roblin_spdf">
-                    <div class="tile-wide bg-green fg-white" data-role="tile">
+                <a href="http://bangumi.tv/user/spdf">
+                    <div class="tile-wide bg-green fg-white" data-effect="slideUpDown" data-role="tile">
                         <div class="tile-content iconic">
-                            <span class="icon mif-favorite"></span>
+                            <div class="live-slide">
+                                <div class="image-container">
+                                    <div class="frame scaled bg-green">
+                                        <img class="scaled-img" src="img/bgm.png">
+                                        <!-- from here : http://bangumi.tv/group/topic/311281 -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="live-slide"><img src="img/1.png" data-role="fitImage" data-format="fill"></div>
                         </div>
                         <span class="tile-label">Bangumi</span>
                     </div>
@@ -78,7 +88,7 @@
                     <div class="tile bg-crimson fg-white" data-role="tile">
                         <div class="tile-content">
                             <div class="image-container">
-                                <div class="frame bg-indigo">
+                                <div class="frame scaled bg-crimson">
                                     <img class="scaled-img" src="img/weibo.png">
                                 </div>
                             </div>
@@ -90,7 +100,7 @@
                     <div class="tile bg-darkOrange fg-white" data-role="tile">
                         <div class="tile-content">
                             <div class="image-container">
-                                <div class="frame bg-indigo">
+                                <div class="frame scaled bg-darkOrange">
                                     <img class="scaled-img" src="img/amazon.png">
                                 </div>
                             </div>
